@@ -1,0 +1,197 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* animation */
+@keyframes 콧구멍 {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+@keyframes 눈물 {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(0) translateY(8px);
+  }
+}
+@keyframes 귀왼쪽 {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(-40deg);
+  }
+}
+@keyframes 귀오른쪽 {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(40deg);
+  }
+}
+
+/* layout */
+.head {
+  width: 280px;
+  margin: 100px;
+  position: relative;
+}
+.ear.left {
+  position: absolute;
+  left: -2%;
+  width: 60px;
+  height: 80px;
+  border-radius: 40% 80% 50% 70%;
+  background-color: rgb(224, 116, 114);
+  z-index: -10;
+  animation: 귀왼쪽 1s infinite alternate;
+}
+.ear.right {
+  position: absolute;
+  right: -2%;
+  width: 60px;
+  height: 80px;
+  border-radius: 80% 40% 70% 50%;
+  background-color: rgb(224, 116, 114);
+  z-index: -10;
+  animation: 귀오른쪽 0.8s infinite alternate;
+}
+.ear .earline {
+  position: absolute;
+  width: 10px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(205, 82, 86);
+}
+.ear.left .earline {
+  top: 28%;
+  left: 40%;
+  transform: rotate(-20deg);
+}
+.ear.right .earline {
+  top: 28%;
+  right: 40%;
+  transform: rotate(20deg);
+}
+.eyebrow {
+  position: absolute;
+  width: 60px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgb(152, 52, 55);
+}
+.eyebrow.left {
+  left: 20%;
+  transform: rotate(30deg);
+}
+.eyebrow.right {
+  right: 20%;
+  transform: rotate(-30deg);
+}
+
+.face {
+  width: 280px;
+  height: 240px;
+  border-radius: 48% 48% 48% 48%;
+  background-color: rgb(240, 130, 123);
+}
+.eye {
+  position: absolute;
+  top: 17%;
+  width: 60px;
+  height: 80px;
+  border-radius: 45%;
+  background-color: white;
+}
+.eye.left {
+  left: 20%;
+}
+.eye.right {
+  right: 20%;
+}
+.eye .black {
+  position: absolute;
+  top: 9%;
+  width: 46px;
+  height: 66px;
+  border-radius: 45%;
+  background-color: #555;
+}
+.eye.left .black {
+  left: 11%;
+}
+.eye.right .black {
+  right: 11%;
+}
+.eye .white.first {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+}
+.eye .white.second {
+  position: absolute;
+  bottom: 25%;
+  right: 10%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+}
+.tear {
+  position: absolute;
+  top: 38%;
+  width: 70px;
+  height: 33px;
+  border-radius: 60% 60% 50% 50%;
+  background-color: rgb(48, 118, 198, 0.7);
+  animation: 눈물 0.8s infinite alternate;
+  z-index: 20;
+}
+.tear.left {
+  left: 15%;
+}
+.tear.right {
+  right: 15%;
+}
+
+.nose {
+  position: relative;
+  top: 42%;
+  left: 50%;
+  margin-left: -90px;
+  width: 180px;
+  height: 100px;
+  border-radius: 55% 55% 45% 45%;
+  background-color: rgb(205, 82, 86);
+  z-index: 100;
+}
+.hole {
+  position: absolute;
+  top: 32%;
+  width: 30px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(152, 52, 55);
+  animation: 콧구멍 0.4s infinite alternate;
+}
+.hole.left {
+  left: 22%;
+}
+.hole.right {
+  right: 22%;
+}
