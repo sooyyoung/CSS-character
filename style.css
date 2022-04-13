@@ -42,6 +42,9 @@
 }
 
 /* layout */
+body {
+  background-color: lightblue;
+}
 .head {
   width: 280px;
   margin: 100px;
